@@ -11,8 +11,40 @@ public class MainMenu {
 		
 		HashMap<Integer, Integer> data = new HashMap<Integer, Integer>();
 		
-		public void getLogin() throws IOException{
-			
+		public void getLogin() throws IOException
+		{
+			int x =1;
+			do {
+				try {
+					data.put(987678,990089);
+					data.put(887569,682276);
+					data.put(923365,744563);
+					data.put(989076,324356);
+					
+					System.out.println("Welcome to Axis Bank ATM!");
+					System.out.println("Enter your Customer Number: ");
+					setCustomerNumber(menuInput.nextInt());
+					
+					System.out.println("Enter your PIN: ");
+					setPinNumber(menuInput.nextInt());
+					
+				} catch(Exception e) {
+					System.out.println("\n Invalid Character(s). Only numbers are allowed. \n");
+					x = 2;
+				}
+				int customerNumber = getCustomerNumber();
+				int pinNumber = getPinNumber();
+				
+				if(data.containsKey(customerNumber) && data.get(customerNumber) == pinNumber)
+				{
+					getAccountType();
+				}
+				else
+				{
+					System.out.println("\n Wrong Customer Number or PIN");
+				} 
+				while(x == 1);
+			}
 		}
 
 	}
