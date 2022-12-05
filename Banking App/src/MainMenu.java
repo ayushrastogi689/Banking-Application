@@ -46,6 +46,35 @@ public class MainMenu {
 				while(x == 1);
 			}
 		}
+		
+		public void getAccountType()
+		{
+			System.out.println("Select the account which you want to access");
+			System.out.println("For Current Account - Press 1");
+			System.out.println("For Savings Account - Press 2");
+			System.out.println("For Exit - Press 3");
+			
+			int selectNumber = menuInput.nextInt();
+			
+			switch(selectNumber)
+			{
+			case 1:
+				getCurrent();
+				break;
+				
+			case 2:
+				getSavings();
+				break;
+				
+			case 3: 
+				System.out.println("Thank you for using our ATM");
+				
+				default:
+					System.out.println("\n Invalid Choice. \n");
+					getAccountType();
+			}
+		}
+		
 
 	}
 
