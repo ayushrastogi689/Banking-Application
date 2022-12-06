@@ -7,7 +7,7 @@ public class MainMenu {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		DecimalFormat moneyFormat = new DecimalFormat("'$'###, ##0.00");
+		DecimalFormat moneyFormat = new DecimalFormat("'Rs '###, ##0.00");
 		
 		HashMap<Integer, Integer> data = new HashMap<Integer, Integer>();
 		
@@ -74,7 +74,20 @@ public class MainMenu {
 					getAccountType();
 			}
 		}
-		
+		public void getCurrent()
+		{
+			System.out.println("Current Account: ");
+			System.out.println("Press 1 - View Balance");
+			System.out.println("Press 2 - Withdraw Funds");
+			System.out.println("Press 3 - Deposit Funds");
+			System.out.println("Press 4 - Exit");
+			System.out.println("Choice: ");
+			
+			int selection = menuInput.nextInt();
+			
+			
+			}
+		}
 
 	}
 
