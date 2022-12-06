@@ -5,7 +5,9 @@ import java.io.*;
 public class Atm extends MainMenu {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		MainMenu mainMenu = new MainMenu();
+		mainMenu.getLogin();
 
 	}
 
