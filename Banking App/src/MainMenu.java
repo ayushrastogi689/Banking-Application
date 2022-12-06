@@ -110,6 +110,43 @@ public class MainMenu {
 				System.out.println("\n Invalid Choice.");
 			}
 		}
+		
+		public void getSaving()
+		{
+			System.out.println("Savings Account: ");
+			System.out.println("Press 1 - View Balance");
+			System.out.println("Press 2 - Withdraw Funds");
+			System.out.println("Press 3 - Deposit Funds");
+			System.out.println("Press 4 - Exit");
+			System.out.println("Choice: ");
+			
+			int selection = menuInput.nextInt();
+			
+			switch(selection)
+			{
+			case 1:
+				System.out.println("Savings Account Balance: "+ moneyFormat.format(getCurrentBalance()));
+				getAccountType();
+				break;
+				
+			case 2:
+				getSavingstWithdrawInput();
+				getAccountType();
+				break;
+				
+			case 3:
+				getSavingsDepositInput();
+				getAccountType();
+				break;
+				
+			case 4:
+				System.out.println("Thank you for using our ATM");
+				break;
+				
+			default:
+				System.out.println("\n Invalid Choice.");
+			}
+		}
 
 	}
 
