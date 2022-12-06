@@ -85,7 +85,29 @@ public class MainMenu {
 			
 			int selection = menuInput.nextInt();
 			
-			
+			switch(selection)
+			{
+			case 1:
+				System.out.println("Current Account Balance: "+ moneyFormat.format(getCurrentBalance()));
+				getAccountType();
+				break;
+				
+			case 2:
+				getCurrentWithdrawInput();
+				getAccountType();
+				break;
+				
+			case 3:
+				getCurrentDepositInput();
+				getAccountType();
+				break;
+				
+			case 4:
+				System.out.println("Thank you for using our ATM");
+				break;
+				
+			default:
+				System.out.println("\n Invalid Choice.");
 			}
 		}
 
