@@ -17,7 +17,17 @@ public class Account
 		return customerNumber
 	}
 	
-
+	public int setPinNumber(int pinNumber)
+	{
+		this.pinNumber = pinNumber;
+		return pinNumber;
+	}
+	
+	public int getPinNumber()
+	{
+		return pinNumber;
+	}
+	
 	}
 
 }
