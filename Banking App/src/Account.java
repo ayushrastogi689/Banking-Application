@@ -48,6 +48,17 @@ public class Account
 		savingsBalance = (savingsBalance - amount);
 		return savingsBalance;
 	}
+	
+	public double calcCurrentDeposit (double amount)
+	{
+		currentBalance = (currentBalance + amount);
+		return currentBalance;
+	}
+	public double calcSavingsDeposit(double amount)
+	{
+		savingsBalance = (savingsBalance + amount);
+		return savingsBalance;
+	}
 	}
 
 }
