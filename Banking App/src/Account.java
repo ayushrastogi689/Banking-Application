@@ -8,6 +8,16 @@ public class Account
 		Scanner sc = new Scanner(System.in);
 		DecimalFormat moneyFormat = new DecimalFormat("'Rs '###, ##0.00");
 		
-		}
+	public int setCustomerNumber(int customerNumber)
+	{
+		this.customerNumber = customerNumber;
+		return customerNumber;
+	}
+	public int getCustomerNumber() {
+		return customerNumber
+	}
+	
+
+	}
 
 }
