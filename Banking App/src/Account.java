@@ -28,6 +28,26 @@ public class Account
 		return pinNumber;
 	}
 	
+	public double getCurrentBalance()
+	{
+		rerturn currentBalance;
+	}
+	
+	public double getSavingsBalance()
+	{
+		return savingsBalance;
+	}
+	
+	public double calcCurrentWithdraw(double amount)
+	{
+		currentBalance = (currentBalance - amount);
+		return currentBalance;
+	}
+	
+	public double calcSavingsWithdraw(double amount) {
+		savingsBalance = (savingsBalance - amount);
+		return savingsBalance;
+	}
 	}
 
 }
