@@ -59,6 +59,22 @@ public class Account
 		savingsBalance = (savingsBalance + amount);
 		return savingsBalance;
 	}
+	
+	public void getCurrentWithdrawInput() {
+		System.out.println("Current Account Balance: "+moneyFormat.format(currentBalance));
+		System.out.println("Amount you want to withdraw from Current Account: ");
+		double amount = input.nextDouble();
+		
+		if((currentBalance - amount) >= 0)
+		{
+			calcCurrentWithdraw(amount);
+			System.out.println("New current Account Balance: "+moneyFormat.format(currentBalance));
+		}
+		else
+		{
+			System.out.println("Insufficient fund \n");
+		}
+	}
 	}
 
 }
