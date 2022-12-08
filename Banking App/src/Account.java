@@ -76,12 +76,39 @@ public class Account
 		}
 	}
 	
+	public void getSavingsWithdrawInput() {
+		System.out.println("Savings Account Balance: "+moneyFormat.format(savingsBalance));
+		System.out.println("Amount you want to withdraw from Savings Account: ");
+		double amount = input.nextDouble();
+		
+		if((savingsBalance - amount) >= 0)
+		{
+			calcCurrentWithdraw(amount);
+			System.out.println("New Savings Account Balance: "+moneyFormat.format(savingsBalance));
+		}
+		else
+		{
+			System.out.println("Insufficient fund \n");
+		}
+	}
+	
 	public void getSavingsDepositInput()
 	{
 		System.out.println("Savings Acoount Balance: "+ moneyFormat.format(savingsBalance));
 		System.out.println("Amount you want to deposit ti Savings Account: ");
 		double amount = input.nextDouble();
+		
+		if((savingsBalance + amount) >= 0)
+		{
+			calcSavingsDeposit(amount);
+			System.out.println("New Savings account balance is: "+moneyFormat.format(savingsBalance));
+		}
+		else
+		{
+			System.out.println("Insufficient funds: \n")
+		}
 	}
+	
 	}
 
 }
