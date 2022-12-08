@@ -75,6 +75,13 @@ public class Account
 			System.out.println("Insufficient fund \n");
 		}
 	}
+	
+	public void getSavingsDepositInput()
+	{
+		System.out.println("Savings Acoount Balance: "+ moneyFormat.format(savingsBalance));
+		System.out.println("Amount you want to deposit ti Savings Account: ");
+		double amount = input.nextDouble();
+	}
 	}
 
 }
