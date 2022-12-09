@@ -109,6 +109,11 @@ public class Account
 		}
 	}
 	
+	private int customerNumber;
+	private int pinNumber;
+	private double currentBalance = 0;
+	private double savingsBalance = 0;
+	
 	}
 
 }
